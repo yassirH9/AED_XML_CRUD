@@ -55,18 +55,7 @@ public class CarDealer {
 
     //Cars crud controls
     public void cnCar(Car car) {//create new car
-
+        this.carInStock.add(car);
     }
 
-    public void rmCar(int id) {//remove car
-
-    }
-
-    public void edCar(Car car, int id) {//edit car
-
-    }
-
-    public void gCar(int id) {//get car
-
-    }
 }
