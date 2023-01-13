@@ -21,6 +21,7 @@ public class DealershipList {
     }
 
 
+    //CarDealer crud controls
     public void cnDealer(CarDealer cardealer){//create new dealer
 
     }
@@ -33,19 +34,4 @@ public class DealershipList {
     public void gDealer(int id){//get dealer
 
     }
-
-    public void cnCar(Car car, int idCarDealer){//create new car
-
-    }
-    public void rmCar(int id){//remove car
-
-    }
-    public void edCar(Car car, int id){//edit car
-
-    }
-    public void gCar(int id){//get car
-
-    }
-
-
 }
