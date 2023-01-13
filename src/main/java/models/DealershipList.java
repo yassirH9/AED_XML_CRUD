@@ -25,21 +25,5 @@ public class DealershipList {
     public void cnDealer(CarDealer cardealer){//create new dealer
         CarsInStock.add(cardealer);
     }
-    public void rmDealer(int id){//remove dealer
-        CarsInStock.forEach((x)->{
-            if(x.getid() == id){
-                CarsInStock.remove(x);
-            }
-        });
-    }
-    public void edDealer(CarDealer cardealer,int id){//edit dealer
-//        CarsInStock.forEach((x)->{
-//            if(x.getid() == id){
-//                CarsInStock.set(x.,cardealer);
-//            }
-//        });
-    }
-    public void gDealer(int id){//get dealer
 
-    }
 }
