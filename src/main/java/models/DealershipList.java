@@ -12,7 +12,6 @@ public class DealershipList {
 //    @XmlElementWrapper(name = "DealerShip")
     @XmlElement(name = "DealerShip")
     private List<CarDealer> CarsInStock;
-
     public void setCarDealerList(List<CarDealer> carDealerList) {
         this.CarsInStock = carDealerList;
     }
@@ -21,12 +20,17 @@ public class DealershipList {
     }
 
 
+
     //CarDealer crud controls
     public void cnDealer(CarDealer cardealer){//create new dealer
-
+        CarsInStock.add(cardealer);
     }
     public void rmDealer(int id){//remove dealer
-
+        CarsInStock.forEach((x)->{
+            if(x.getid() == id){
+                CarsInStock.remove(x);
+            }
+        });
     }
     public void edDealer(CarDealer cardealer,int id){//edit dealer
 

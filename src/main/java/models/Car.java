@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Car")
 public class Car {
+    private int carid;
     //branding
     private String Brand;
     private String Model;
@@ -17,6 +18,13 @@ public class Car {
     }
     public String getModel() {
         return Model;
+    }
+
+    public int getid(){
+        return this.carid;
+    }
+    public void setid(int id){
+        this.carid = id;
     }
 
     public int getHp() {

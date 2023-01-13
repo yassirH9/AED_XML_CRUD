@@ -11,7 +11,7 @@ public class CarDealer {
     private String tfn;
     @XmlElement(name = "car")
     private List<Car> carInStock;//lista de coches de ese consecionario
-
+    private int dealerID;
 
     public void setCarInStock(List<Car> carStock) {
         this.carInStock = carStock;
@@ -25,28 +25,40 @@ public class CarDealer {
         this.tfn = tfn;
     }
 
-    public String gettfn(){
+    public String gettfn() {
         return this.tfn;
     }
-    public String getlocation(){
+
+    public String getlocation() {
         return this.location;
     }
-    public List<Car> getcars(){
+
+    public List<Car> getcars() {
         return this.carInStock;
     }
 
+    public int getid() {
+        return this.dealerID;
+    }
+
+    public void setid(int id) {
+        this.dealerID = id;
+    }
 
     //Cars crud controls
-    public void cnCar(Car car){//create new car
+    public void cnCar(Car car) {//create new car
 
     }
-    public void rmCar(int id){//remove car
+
+    public void rmCar(int id) {//remove car
 
     }
-    public void edCar(Car car, int id){//edit car
+
+    public void edCar(Car car, int id) {//edit car
 
     }
-    public void gCar(int id){//get car
+
+    public void gCar(int id) {//get car
 
     }
 }
