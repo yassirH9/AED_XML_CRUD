@@ -19,16 +19,30 @@ public class
 DealerShipGUI extends JDialog {
     private String XMLDBFILEPATH = "./CarDealerDB.xml";
     private JPanel contentPane;
-    private JButton CRUDModeButton;
     private JButton readFromXMLButton;
     private JButton generateXMLFileButton;
     private JTextArea textArea1;
+    private JComboBox dealerComboBox1;
+    private JButton editButton;
 
 
     public DealerShipGUI() {
         setContentPane(contentPane);
         setModal(true);
         setTitle("DealerShips CRUD Repository");
+
+        if (new File(XMLDBFILEPATH).exists()) {
+            try{
+                indata();
+            }catch (Exception ex){
+                ex.printStackTrace();
+                System.out.println(ex);
+            }
+            generateXMLFileButton.setEnabled(false);
+        } else {
+            readFromXMLButton.setEnabled(false);
+        }
+
         this.setMinimumSize(new Dimension(500, 500));
 
         this.generateXMLFileButton.addActionListener(new ActionListener() {
@@ -70,15 +84,18 @@ DealerShipGUI extends JDialog {
         Unmarshaller um = context.createUnmarshaller();
         DealershipList deallistRead = (DealershipList) um.unmarshal(new FileReader(XMLDBFILEPATH));
         List<CarDealer> carsdealers = deallistRead.getList();
+        textArea1.setText("");
 
         carsdealers.forEach((dealer)->{
             textArea1.append("Dealer {"+"tlf:"+dealer.gettfn()+" - location:"+dealer.getlocation()+"}\n");
+//            dealerComboBox1.add(dealer.)
             dealer.getcars().forEach((car -> {
 
                 textArea1.append("* "+car.getBrand()+" - "+car.getModel()+" - "+car.getModelYear()+"\n");
 
             }));
         });
+
     }
     public void outdata() throws JAXBException, FileNotFoundException {
         List<Car> carList = new ArrayList<Car>();
