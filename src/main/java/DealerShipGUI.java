@@ -87,11 +87,11 @@ DealerShipGUI extends JDialog {
         textArea1.setText("");
 
         carsdealers.forEach((dealer)->{
-            textArea1.append("Dealer {"+"tlf:"+dealer.gettfn()+" - location:"+dealer.getlocation()+"}\n");
+            textArea1.append("Dealer {"+" Tlf: "+dealer.gettfn()+" - Location: "+dealer.getlocation()+" }\n");
 //            dealerComboBox1.add(dealer.)
             dealer.getcars().forEach((car -> {
 
-                textArea1.append("* "+car.getBrand()+" - "+car.getModel()+" - "+car.getModelYear()+"\n");
+                textArea1.append("<=3 "+car.getBrand()+" "+car.getModel()+" - "+car.getModelYear()+"\n");
 
             }));
         });
