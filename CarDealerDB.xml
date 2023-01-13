@@ -6,6 +6,7 @@
             <hp>100</hp>
             <model>fiesta</model>
             <modelYear>2019</modelYear>
+            <id>0</id>
             <nDoors>3</nDoors>
         </car>
         <car>
@@ -13,8 +14,11 @@
             <hp>90</hp>
             <model>escort</model>
             <modelYear>1996</modelYear>
+            <id>0</id>
             <nDoors>5</nDoors>
         </car>
+        <id>0</id>
+        <name>Macaroni</name>
     </DealerShip>
     <DealerShip location="Telde" tfn="65419864">
         <car>
@@ -22,6 +26,7 @@
             <hp>100</hp>
             <model>fiesta</model>
             <modelYear>2019</modelYear>
+            <id>0</id>
             <nDoors>3</nDoors>
         </car>
         <car>
@@ -29,7 +34,10 @@
             <hp>90</hp>
             <model>escort</model>
             <modelYear>1996</modelYear>
+            <id>0</id>
             <nDoors>5</nDoors>
         </car>
+        <id>0</id>
+        <name>SilboCars</name>
     </DealerShip>
 </ns2:DealerShips>

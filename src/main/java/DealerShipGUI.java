@@ -88,14 +88,15 @@ DealerShipGUI extends JDialog {
 
         carsdealers.forEach((dealer)->{
             textArea1.append("Dealer {"+" Tlf: "+dealer.gettfn()+" - Location: "+dealer.getlocation()+" }\n");
-//            dealerComboBox1.add(dealer.)
+            dealerComboBox1.addItem(dealer.getname());
             dealer.getcars().forEach((car -> {
 
-                textArea1.append("<=3 "+car.getBrand()+" "+car.getModel()+" - "+car.getModelYear()+"\n");
+                textArea1.append("<==3 "+car.getBrand()+" "+car.getModel()+" - "+car.getModelYear()+"\n");
 
             }));
         });
-
+        generateXMLFileButton.setEnabled(false);
+        readFromXMLButton.setEnabled(true);
     }
     public void outdata() throws JAXBException, FileNotFoundException {
         List<Car> carList = new ArrayList<Car>();
@@ -121,11 +122,13 @@ DealerShipGUI extends JDialog {
 
 
         CarDealer Dealer = new CarDealer();
+        Dealer.setname("Macaroni");
         Dealer.setLocation("Las palmas");
         Dealer.setTfn("605537464");
         Dealer.setCarInStock(carList);
 
         CarDealer Dealer2 = new CarDealer();
+        Dealer2.setname("SilboCars");
         Dealer2.setLocation("Telde");
         Dealer2.setTfn("65419864");
         Dealer2.setCarInStock(carList);
@@ -145,5 +148,6 @@ DealerShipGUI extends JDialog {
         System.out.println("Escirbiendo XML");
         //creacion del archivo
         marshaller.marshal(dealershipList, new File(XMLDBFILEPATH));
+        indata();
     }
 }
