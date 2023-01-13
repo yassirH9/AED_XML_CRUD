@@ -33,7 +33,11 @@ public class DealershipList {
         });
     }
     public void edDealer(CarDealer cardealer,int id){//edit dealer
-
+//        CarsInStock.forEach((x)->{
+//            if(x.getid() == id){
+//                CarsInStock.set(x.,cardealer);
+//            }
+//        });
     }
     public void gDealer(int id){//get dealer
 

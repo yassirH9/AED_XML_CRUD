@@ -12,6 +12,14 @@ public class CarDealer {
     @XmlElement(name = "car")
     private List<Car> carInStock;//lista de coches de ese consecionario
     private int dealerID;
+    private String name;
+
+    private String getname(){
+        return this.name;
+    }
+    private void setname(String name){
+        this.name = name;
+    }
 
     public void setCarInStock(List<Car> carStock) {
         this.carInStock = carStock;
